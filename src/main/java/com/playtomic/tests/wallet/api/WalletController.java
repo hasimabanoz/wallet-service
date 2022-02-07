@@ -102,12 +102,4 @@ public class WalletController {
 		return result;
 	}
 
-	@PostMapping("/save")
-	@ResponseStatus(HttpStatus.CREATED)
-	@ResponseBody
-	public String save(@RequestBody User user) {
-		log.info("Logging from /save");
-		userRepository.save(user);
-		return user.toString();
-	}
 }
